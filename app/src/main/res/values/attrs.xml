@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleDrawableListView">
+        <attr name="maxCount" format="integer"/>
+        <attr name="circlePadding" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="SlidingPanelViewGroup">
+        <attr name="itemsCount" format="integer"/>
+        <attr name="itemsTitle" format="enum"/>
+        <attr name="itemsColor" format="color"/>
+        <attr name="itemsTextColor" format="color"/>
+        <attr name="itemsSelectedTextColor" format="color"/>
+        <attr name="sliderColor" format="color"/>
+    </declare-styleable>
+
+</resources>

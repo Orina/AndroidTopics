@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AndroidTopics</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="item_names">
+        <item>Cafe</item>
+        <item>Bistro</item>
+        <item>Restaurant</item>
+    </string-array>
+
+    <string name="long_text">Sometimes even such easy question as aligning an EditText beside a button could be tricky. The EditText should fill as much of the width as possible and the button should be at the right hand side and does not take additional space at the top</string>
+</resources>
