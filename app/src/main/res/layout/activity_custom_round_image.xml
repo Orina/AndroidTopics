@@ -1,9 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.topic.elmira.androidtopics.roundimage.CustomRoundImageActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_margin="8dp"
+              android:padding="8dp"
+              android:orientation="vertical"
+              tools:context="com.topic.elmira.androidtopics.roundimage.CustomRoundImageActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <com.topic.elmira.androidtopics.roundimage.CustomRoundImage
+        android:id="@+id/roundImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="8dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/my_layer_list"/>
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/my_shape_round_rect"
+        android:text="Hello, world!"
+        android:padding="8dp"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="Click me!"
+        android:background="@drawable/my_state_list"/>
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:src="@drawable/image1"
+        android:background="@drawable/image_round"/>
+
+</LinearLayout>
