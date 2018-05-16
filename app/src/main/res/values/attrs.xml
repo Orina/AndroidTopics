@@ -15,4 +15,9 @@
         <attr name="sliderColor" format="color"/>
     </declare-styleable>
 
+    <declare-styleable name="ShapeSelectorView">
+        <attr name="shapeColor" format="color"/>
+        <attr name="showShapeName" format="boolean"/>
+    </declare-styleable>
+
 </resources>
