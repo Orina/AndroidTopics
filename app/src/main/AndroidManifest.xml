@@ -28,11 +28,21 @@
 
         </activity>
         <activity android:name=".touchevents.TouchEventsActivity">
+        </activity>
+
+        <activity android:name=".dragframe.CircleDragActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".dragrecyclerview.MyRecyclerViewActivity"
+            android:label="@string/title_activity_my_recycler_view"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
     </application>
 
 </manifest>
