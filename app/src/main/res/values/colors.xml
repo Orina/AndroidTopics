@@ -6,4 +6,6 @@
 
     <color name="dark_pink">#E91E63</color>
     <color name="pink">#FF4081</color>
+    <color name="pink_light">#f9dbf9</color>
+
 </resources>

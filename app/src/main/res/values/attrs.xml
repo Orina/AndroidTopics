@@ -17,6 +17,7 @@
 
     <declare-styleable name="ShapeSelectorView">
         <attr name="shapeColor" format="color"/>
+        <attr name="textColor" format="color"/>
         <attr name="showShapeName" format="boolean"/>
     </declare-styleable>
 

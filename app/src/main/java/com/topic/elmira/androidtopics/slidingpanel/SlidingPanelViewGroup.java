@@ -89,6 +89,7 @@ public class SlidingPanelViewGroup extends FrameLayout {
         mGestureDetector = new GestureDetector(mSliderView.getContext(), gestureListener);
 
         mSliderView.setOnTouchListener(new OnTouchListener() {
+
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 boolean result = mGestureDetector.onTouchEvent(event);
@@ -109,6 +110,7 @@ public class SlidingPanelViewGroup extends FrameLayout {
             }
         });
 
+        
     }
 
     @Override

@@ -23,11 +23,15 @@ public class ShapeSelectorView extends View {
     private static final String LOG_TAG = "ShapeSelectorView";
 
     private int shapeColor;
+    private int textColor;
     private boolean showName;
 
     private int defaultShapeWidth = 200;
     private int defaultShapeHeight = 200;
+    private int padding = 24;
+
     private Paint shapePaint;
+    private Paint textPaint;
 
     private int textXOffset = 0;
     private int textYOffset = 100;
@@ -49,18 +53,20 @@ public class ShapeSelectorView extends View {
         Log.d(LOG_TAG, "onDraw()");
         super.onDraw(canvas);
 
-        int shapeWidth = getMeasuredWidth();
-        int shapeHeight = getMeasuredHeight();
+        int shapeWidth = getWidth(); //getMeasuredWidth();
+        int shapeHeight = getHeight(); //getMeasuredHeight();
+
+        int h = Math.min(shapeWidth, shapeHeight);
 
         //Square
         if (currentShapeIdx==0){
-            canvas.drawRect(0, 0, shapeWidth, shapeHeight, shapePaint);
-            textXOffset = 0;
+            canvas.drawRect(0, 0, h, h, shapePaint);
+            textXOffset = h + padding;
         }
         //Circle
         else if (currentShapeIdx==1){
-            canvas.drawCircle(shapeWidth/2, shapeHeight/2, shapeWidth/2, shapePaint);
-            textXOffset = 12;
+            canvas.drawCircle(h/2, h/2, h/2, shapePaint);
+            textXOffset = h + padding;
         }
         //triangle
         else if (currentShapeIdx==2){
@@ -69,9 +75,9 @@ public class ShapeSelectorView extends View {
         }
 
         //canvas.drawRect(0, 0, defaultShapeWidth, defaultShapeHeight, shapePaint);
-        if (showName) {
-            canvas.drawText(shapeValues[currentShapeIdx], textXOffset, shapeHeight + textYOffset, shapePaint);
-        }
+        //if (showName) {
+            canvas.drawText(shapeValues[currentShapeIdx], textXOffset, shapeHeight + textYOffset, textPaint);
+        //}
     }
 
     @Override
@@ -80,6 +86,8 @@ public class ShapeSelectorView extends View {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 
         int contentWidth = defaultShapeWidth;
+
+        padding = Math.max(padding, getPaddingStart());
 
         int minWidth = getPaddingStart() + contentWidth + getPaddingEnd();
         int w = resolveSizeAndState(minWidth, widthMeasureSpec, 0);
@@ -126,6 +134,7 @@ public class ShapeSelectorView extends View {
         try {
             shapeColor = a.getColor(R.styleable.ShapeSelectorView_shapeColor, Color.BLACK);
             showName = a.getBoolean(R.styleable.ShapeSelectorView_showShapeName, true);
+            textColor = a.getColor(R.styleable.ShapeSelectorView_textColor, Color.RED);
         } finally {
             a.recycle();
         }
@@ -135,7 +144,11 @@ public class ShapeSelectorView extends View {
         shapePaint = new Paint();
         shapePaint.setColor(shapeColor);
         shapePaint.setStyle(Paint.Style.FILL);
-        shapePaint.setTextSize(60);
+
+        textPaint = new Paint();
+        textPaint.setTextSize(60);
+        textPaint.setColor(textColor);
+        textPaint.setStyle(Paint.Style.FILL);
     }
 
     public int getShapeColor() {
