@@ -1,7 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp">
+
+    <ImageView
+        android:id="@+id/ivNews"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:src="@drawable/image3"
+        tools:src="@drawable/image3"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="?android:textAppearanceLarge"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ivNews"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title is quite long but should fit, right?"/>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        style="?android:textAppearanceMedium"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toEndOf="@+id/ivNews"
+        tools:text="Some message let make it a bit longer so that it won't fit the width"/>
 
 </android.support.constraint.ConstraintLayout>

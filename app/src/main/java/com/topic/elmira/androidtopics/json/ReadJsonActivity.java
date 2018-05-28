@@ -1,7 +1,9 @@
 package com.topic.elmira.androidtopics.json;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+
+import com.topic.elmira.androidtopics.R;
 
 public class ReadJsonActivity extends AppCompatActivity {
 

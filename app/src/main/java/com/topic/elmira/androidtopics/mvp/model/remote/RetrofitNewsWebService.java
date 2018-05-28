@@ -1,7 +1,5 @@
 package com.topic.elmira.androidtopics.mvp.model.remote;
 
-import com.google.gson.GsonBuilder;
-
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -9,14 +7,14 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by Elmira Andreeva on 5/24/18.
  */
 
-public class RetrofiltNewsWebService {
+public class RetrofitNewsWebService {
 
-    private static Retrofit retrofitInstance;
+    private static NewsWebService retrofitInstance;
 
-    public static Retrofit getRetrofit(){
+    public static NewsWebService getRetrofit(){
         if (retrofitInstance == null){
             retrofitInstance = new Retrofit.Builder().baseUrl(NewsWebService.ENDPOINT)
-                    .addConverterFactory(GsonConverterFactory.create(new GsonBuilder().create())).build();
+                    .addConverterFactory(GsonConverterFactory.create()).build().create(NewsWebService.class);
         }
         return retrofitInstance;
     }

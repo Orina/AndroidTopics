@@ -78,6 +78,7 @@ public class CircleDrawableListView extends View {
         Log.d(LOG_TAG, "setDrawables()");
         if (list == null || list.size() == 0) return;
         mDrawables = new ArrayList<>();
+
         for (int i = 0; i < mMaxCount && i < list.size(); i++) {
             RoundedBitmapDrawable d =
                     RoundedBitmapDrawableFactory.create(getResources(), list.get(i));

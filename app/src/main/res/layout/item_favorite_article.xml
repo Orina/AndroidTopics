@@ -1,7 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<GridLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:columnCount="3">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:id="@+id/ivNews"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_gravity="start"
+        android:layout_rowSpan="2"
+        tools:src="@drawable/image3"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="?android:textAppearanceLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:gravity="fill"
+        android:layout_margin="8dp"
+        tools:text="Title"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_margin="8dp"
+        android:layout_rowSpan="2"
+        android:src="@drawable/ic_favorite"/>
+
+    <TextView
+        android:id="@+id/tvMessage"
+        style="?android:textAppearanceMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_margin="8dp"
+        tools:text="Some message"/>
+
+</GridLayout>
