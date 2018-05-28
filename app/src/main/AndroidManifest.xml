@@ -15,7 +15,8 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".circledrawableslist.CircleDrawablesListActivity"/>
+        <activity android:name=".circledrawableslist.CircleDrawablesListActivity">
+        </activity>
         <activity android:name=".downloadimage.DownloadImageActivity"/>
         <activity android:name=".slidingpanel.SlidingPanelActivity">
         </activity>
@@ -23,23 +24,52 @@
         <service
             android:name=".downloadimage.DownloadImageIntentService"
             android:exported="false"/>
+        <service
+            android:name=".periodictasks.AlarmScheduler"
+            android:exported="false"/>
 
         <activity android:name=".roundimage.CustomRoundImageActivity">
         </activity>
         <activity android:name=".touchevents.TouchEventsActivity">
         </activity>
         <activity android:name=".animation.AnimationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".threading.LooperActivity">
         </activity>
         <activity android:name=".threading.HandlerExampleActivity">
         </activity>
         <activity android:name=".threading.ThreadRetainActivity">
+        </activity>
+        <activity android:name=".dragframe.CircleDragActivity">
+        </activity>
+        <activity
+            android:name=".dragrecyclerview.MyRecyclerViewActivity"
+            android:label="@string/title_activity_my_recycler_view"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+        <activity android:name=".gesture.GestureActivity">
+        </activity>
+        <activity android:name=".json.ReadJsonActivity">
+        </activity>
+        <activity android:name=".sharedpreferences.SharedPreferencesActivity">
+        </activity>
+        <activity android:name=".json.LoadArticlesActivity">
+        </activity>
+        <activity android:name=".executors.ImagesDownloadActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".mvp.NewsActivity">
+        </activity>
+        <activity android:name=".periodictasks.PeriodicActivity">
+        </activity>
+        <activity android:name=".executors.ExecutorsActivity">
+        </activity>
+        <activity android:name=".executors.InvokeAllActivity">
         </activity>
     </application>
 
