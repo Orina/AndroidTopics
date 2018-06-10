@@ -60,6 +60,7 @@
         <activity android:name=".json.LoadArticlesActivity">
         </activity>
         <activity android:name=".executors.ImagesDownloadActivity">
+
         </activity>
         <activity android:name=".mvp.NewsActivity">
         </activity>
