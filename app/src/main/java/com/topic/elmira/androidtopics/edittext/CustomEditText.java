@@ -6,6 +6,7 @@ import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 
 import com.topic.elmira.androidtopics.R;
 
@@ -15,7 +16,9 @@ import com.topic.elmira.androidtopics.R;
 
 public class CustomEditText extends AppCompatEditText {
 
+    int width;
     private Drawable applyButton;
+    private boolean isDisplayApplyButton = false;
 
     public CustomEditText(Context context) {
         super(context);
@@ -32,7 +35,13 @@ public class CustomEditText extends AppCompatEditText {
         init(context);
     }
 
-    private void init(Context context){
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        width = w;
+    }
+
+    private void init(Context context) {
         applyButton = context.getDrawable(R.drawable.apply_button);
 
         addTextChangedListener(new TextWatcher() {
@@ -43,7 +52,9 @@ public class CustomEditText extends AppCompatEditText {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                showApplyButton();
+                if (!isDisplayApplyButton) {
+                    showApplyButton();
+                }
             }
 
             @Override
@@ -51,14 +62,37 @@ public class CustomEditText extends AppCompatEditText {
 
             }
         });
-
     }
 
-    private void showApplyButton(){
+    private void showApplyButton() {
         setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, applyButton, null);
+        isDisplayApplyButton = true;
     }
 
-    private void hideApplyButton(){
+    private void hideApplyButton() {
         setCompoundDrawablesRelativeWithIntrinsicBounds(null, null, null, null);
+        isDisplayApplyButton = false;
+    }
+
+    @Override
+    public boolean performClick() {
+        super.performClick();
+        return true;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        if (!performClick()) return false;
+
+        int startApplyButtonWidth = getWidth() - getPaddingRight() - applyButton.getIntrinsicWidth();
+        if (event.getX() > startApplyButtonWidth) {
+            if (event.getAction() == MotionEvent.ACTION_DOWN) {
+                return true;
+            } else if (event.getAction() == MotionEvent.ACTION_UP) {
+                hideApplyButton();
+                getText().clear();
+                return true;
+            } else return super.onTouchEvent(event);
+        } else return super.onTouchEvent(event);
     }
 }

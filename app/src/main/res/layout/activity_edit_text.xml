@@ -8,14 +8,11 @@
     android:orientation="vertical"
     tools:context="com.topic.elmira.androidtopics.edittext.EditTextActivity">
 
-    <EditText
-        android:layout_width="match_parent"
+    <com.topic.elmira.androidtopics.edittext.CustomEditTextWithButton
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:padding="8dp"
-        android:inputType="text"
-        android:textAllCaps="true"
-        android:textAppearance="@android:style/TextAppearance.Medium"
-        android:hint="Enter promo code"
+        android:orientation="horizontal"
         />
 
 </LinearLayout>
