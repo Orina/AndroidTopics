@@ -4,6 +4,10 @@
 
     <uses-permission android:name="android.permission.INTERNET"/>
 
+    <meta-data
+        android:name="com.google.android.gms.vision.DEPENDENCIES"
+        android:value="face"/>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,11 +37,6 @@
         <activity android:name=".touchevents.TouchEventsActivity">
         </activity>
         <activity android:name=".animation.AnimationActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
         </activity>
         <activity android:name=".threading.LooperActivity">
         </activity>
@@ -70,6 +69,17 @@
         <activity android:name=".executors.ExecutorsActivity">
         </activity>
         <activity android:name=".executors.InvokeAllActivity">
+        </activity>
+        <activity android:name=".facedetection.FaceDetectionActivity">
+        </activity>
+        <activity android:name=".rating.RatingActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".edittext.EditTextActivity">
         </activity>
     </application>
 

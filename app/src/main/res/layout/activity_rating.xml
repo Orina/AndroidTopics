@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.topic.elmira.androidtopics.rating.RatingActivity"
+    android:columnCount="1">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:src="@drawable/image3"/>
+
+    <!--<com.topic.elmira.androidtopics.rating.CustomRatingBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_rowSpan="4"/>-->
+
+    <!--<com.topic.elmira.androidtopics.rating.CustomRatingBarXmlAll
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_rowSpan="4"
+        />-->
+
+    <com.topic.elmira.androidtopics.rating.CustomRatingBarXmlRating
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_rowSpan="4"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/round_gradient_btn"
+        android:text="Rate me!"/>
+
+</GridLayout>
