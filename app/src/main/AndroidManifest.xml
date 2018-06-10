@@ -33,6 +33,11 @@
         <activity android:name=".touchevents.TouchEventsActivity">
         </activity>
         <activity android:name=".animation.AnimationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
         </activity>
         <activity android:name=".threading.LooperActivity">
         </activity>
@@ -56,11 +61,6 @@
         <activity android:name=".json.LoadArticlesActivity">
         </activity>
         <activity android:name=".executors.ImagesDownloadActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
 
         </activity>
         <activity android:name=".mvp.NewsActivity">

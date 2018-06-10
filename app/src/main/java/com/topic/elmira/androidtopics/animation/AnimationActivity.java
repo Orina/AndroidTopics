@@ -6,6 +6,7 @@ import android.animation.ValueAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.AccelerateDecelerateInterpolator;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.TextView;
 
@@ -24,7 +25,22 @@ public class AnimationActivity extends AppCompatActivity {
     }
 
     public void startAnimation(View view){
-        ValueAnimator animator = ValueAnimator.ofFloat(1, 0.5f, 1);
+        textView.setAlpha(0);
+        textView.setScaleX(0);
+        textView.setScaleY(0);
+
+        textView.animate()
+                .alpha(1)
+                .scaleY(1)
+                .scaleX(1)
+                .rotation(45f)
+                .translationY(textView.getWidth())
+                .translationZ(24f)
+                .setInterpolator(new AccelerateDecelerateInterpolator())
+                .setDuration(1000)
+                .start();
+
+        /*ValueAnimator animator = ValueAnimator.ofFloat(1, 0.5f, 1);
         animator.setDuration(2000);
         animator.setInterpolator(new DecelerateInterpolator());
         animator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
@@ -39,5 +55,7 @@ public class AnimationActivity extends AppCompatActivity {
         Animator fadeAnim = AnimatorInflater.loadAnimator(view.getContext(), R.animator.anim_fade_out);
         fadeAnim.setTarget(view);
         fadeAnim.start();
+        */
+
     }
 }
