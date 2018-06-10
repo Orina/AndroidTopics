@@ -1,11 +1,14 @@
 package com.topic.elmira.androidtopics.edittext;
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.content.Context;
 import android.support.annotation.Nullable;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -75,12 +78,33 @@ public class CustomEditTextWithButton extends LinearLayout {
     }
 
     private void hideApplyButton(){
-        isDisplayApplyButton = true;
-        applyButton.setVisibility(View.INVISIBLE);
+        isDisplayApplyButton = false;
+        applyButton.animate()
+                .alpha(0)
+                .setDuration(500)
+                .setListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        //applyButton.setVisibility(View.INVISIBLE);
+                    }
+                });
+        //applyButton.setVisibility(View.INVISIBLE);
     }
 
     private void showApplyButton(){
         isDisplayApplyButton = true;
-        applyButton.setVisibility(View.VISIBLE);
+        //applyButton.setVisibility(View.VISIBLE);
+        applyButton.animate()
+                .alpha(1)
+                .setDuration(500)
+                .setListener(new AnimatorListenerAdapter() {
+                    @Override
+                    public void onAnimationEnd(Animator animation) {
+                        super.onAnimationEnd(animation);
+                        //applyButton.setVisibility(View.VISIBLE);
+                    }
+                });
+
     }
 }
