@@ -13,13 +13,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hello, Alexey and Elmira!"
-        android:background="@drawable/text_view_rect"/>
+        android:background="@drawable/text_view_rect"
+        android:layout_gravity="center"/>
 
     <Button
+        android:id="@+id/animateBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Animate"
         android:onClick="startAnimation"
-        android:stateListAnimator="@xml/animate_scale"/>
+        android:stateListAnimator="@xml/animate_scale"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
