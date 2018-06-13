@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.topic.elmira.androidtopics">
+    package="com.topic.elmira.androidtopics">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <meta-data
         android:name="com.google.android.gms.vision.DEPENDENCIES"
-        android:value="face"/>
+        android:value="face" />
 
     <application
         android:allowBackup="true"
@@ -18,57 +18,56 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".circledrawableslist.CircleDrawablesListActivity"/>
-        <activity android:name=".downloadimage.DownloadImageActivity"/>
-        <activity android:name=".slidingpanel.SlidingPanelActivity"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".circledrawableslist.CircleDrawablesListActivity" />
+        <activity android:name=".downloadimage.DownloadImageActivity" />
+        <activity android:name=".slidingpanel.SlidingPanelActivity" />
 
         <service
             android:name=".downloadimage.DownloadImageIntentService"
-            android:exported="false"/>
+            android:exported="false" />
         <service
             android:name=".periodictasks.AlarmScheduler"
-            android:exported="false"/>
+            android:exported="false" />
 
-        <activity android:name=".roundimage.CustomRoundImageActivity"/>
-        <activity android:name=".touchevents.TouchEventsActivity"/>
-        <activity android:name=".animation.AnimationActivity"/>
-        <activity android:name=".threading.LooperActivity"/>
-        <activity android:name=".threading.HandlerExampleActivity"/>
-        <activity android:name=".threading.ThreadRetainActivity"/>
-        <activity android:name=".dragframe.CircleDragActivity"/>
+        <activity android:name=".roundimage.CustomRoundImageActivity" />
+        <activity android:name=".touchevents.TouchEventsActivity" />
+        <activity android:name=".animation.AnimationActivity" />
+        <activity android:name=".threading.LooperActivity" />
+        <activity android:name=".threading.HandlerExampleActivity" />
+        <activity android:name=".threading.ThreadRetainActivity" />
+        <activity android:name=".dragframe.CircleDragActivity" />
         <activity
             android:name=".dragrecyclerview.MyRecyclerViewActivity"
             android:label="@string/title_activity_my_recycler_view"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".gesture.GestureActivity"/>
-        <activity android:name=".json.ReadJsonActivity"/>
-        <activity android:name=".sharedpreferences.SharedPreferencesActivity"/>
-        <activity android:name=".json.LoadArticlesActivity"/>
-        <activity android:name=".executors.ImagesDownloadActivity"/>
-        <activity android:name=".mvp.NewsActivity"/>
-        <activity android:name=".periodictasks.PeriodicActivity"/>
-        <activity android:name=".executors.ExecutorsActivity"/>
-        <activity android:name=".executors.InvokeAllActivity"/>
-        <activity android:name=".facedetection.FaceDetectionActivity"/>
-        <activity android:name=".rating.RatingActivity"/>
-        <activity android:name=".edittext.EditTextActivity">
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".gesture.GestureActivity" />
+        <activity android:name=".json.ReadJsonActivity" />
+        <activity android:name=".sharedpreferences.SharedPreferencesActivity" />
+        <activity android:name=".json.LoadArticlesActivity" />
+        <activity android:name=".executors.ImagesDownloadActivity" />
+        <activity android:name=".mvp.NewsActivity" />
+        <activity android:name=".periodictasks.PeriodicActivity" />
+        <activity android:name=".executors.ExecutorsActivity" />
+        <activity android:name=".executors.InvokeAllActivity" />
+        <activity android:name=".facedetection.FaceDetectionActivity" />
+        <activity android:name=".rating.RatingActivity" />
+        <activity android:name=".edittext.EditTextActivity" />
+        <activity android:name=".pulseanimation.PulseActivity" />
+        <activity android:name=".arcanimation.ArcAnimationActivity" />
+        <activity android:name=".viewpager.ViewPagerActivity" />
+        <activity android:name=".progressbar.ProgressBarActivity"></activity>
+        <activity android:name=".snaprecyclerview.SnapRecyclerViewActivity" />
+        <activity android:name=".drawonimage.DrawOnImageActivity" />
+        <activity android:name=".spans.SpansActivity">
         </activity>
-        <activity android:name=".pulseanimation.PulseActivity">
-        </activity>
-        <activity android:name=".arcanimation.ArcAnimationActivity">
-        </activity>
-        <activity android:name=".viewpager.ViewPagerActivity">
-        </activity>
-        <activity android:name=".progressbar.ProgressBarActivity">
+        <activity android:name=".seekbar.SeekBarActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".snaprecyclerview.SnapRecyclerViewActivity">
-        </activity>
-        <activity android:name=".drawonimage.DrawOnImageActivity">
+
         </activity>
     </application>
 

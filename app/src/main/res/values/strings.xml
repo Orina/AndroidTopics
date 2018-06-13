@@ -11,6 +11,8 @@
 
     <string name="apply_button">Apply</string>
 
+    <string name="stringWithParam">Hello %1$s! You have %2$d messages</string>
+
     <string-array name="item_names">
         <item>Cafe</item>
         <item>Bistro</item>
@@ -62,4 +64,22 @@
     </string-array>
 
     <string name="long_text">Sometimes even such easy question as aligning an EditText beside a button could be tricky. The EditText should fill as much of the width as possible and the button should be at the right hand side and does not take additional space at the top</string>
+
+    <string name="very_long_text">Note that a ScrollView can only contain a single child element so if you need multiple things to be scrollable, you need to wrap that content into a layout as shown above.
+
+In certain situations, you want to position content beneath the end of the scrollable content area. For example for a "terms of service" where you can only accept once you\'ve scrolled through all the content. In this case, you might need to apply the android:fillViewport property to "true". Read this post by Romain Guy for a detailed look at this use case.
+
+Scrollable TextView
+Note that a TextView doesn\'t require a ScrollView and if you just need a scrolling TextView simply set the scrollbars property and apply the correct MovementMethod:
+
+\nand then in the activity:
+
+\nTextView tv = (TextView) findViewById(R.id.tv_long);
+\ntv.setMovementMethod(new ScrollingMovementMethod());
+\nNow the TextView will automatically scroll vertically.
+
+\nHorizontally Scrolling
+\nIn other cases, we want content to horizontally s</string>
+
+
 </resources>
