@@ -11,7 +11,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-
 import com.topic.elmira.androidtopics.R;
 
 import java.util.ArrayList;
@@ -25,7 +24,8 @@ import butterknife.ButterKnife;
  */
 public class MyRecyclerListFragment extends Fragment {
 
-    @BindView(R.id.rv_list) RecyclerView rvList;
+    @BindView(R.id.rv_list)
+    RecyclerView rvList;
 
     public MyRecyclerListFragment() {
     }
@@ -44,7 +44,7 @@ public class MyRecyclerListFragment extends Fragment {
         setupRecyclerView();
     }
 
-    private void setupRecyclerView(){
+    private void setupRecyclerView() {
         MyRecyclerViewAdapter adapter = new MyRecyclerViewAdapter();
         adapter.setData(getItems());
 
@@ -61,12 +61,12 @@ public class MyRecyclerListFragment extends Fragment {
         helper.attachToRecyclerView(rvList);
     }
 
-    private List<Item> getItems(){
+    private List<Item> getItems() {
         String[] titles = getResources().getStringArray(R.array.item_names_2);
         String[] desc = getResources().getStringArray(R.array.item_descriptions);
 
         List<Item> res = new ArrayList<>();
-        for (int i=0; i< titles.length; i++){
+        for (int i = 0; i < titles.length; i++) {
             res.add(new Item(titles[i], desc[i]));
         }
         return res;

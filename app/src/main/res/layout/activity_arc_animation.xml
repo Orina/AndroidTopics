@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.topic.elmira.androidtopics.arcanimation.ArcAnimationActivity">
+
+    <com.topic.elmira.androidtopics.arcanimation.ArcAnimationView
+        android:id="@+id/arcView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:padding="16dp"
+        app:backgroundColor="@color/pink_light"
+        app:fillColor="@color/pink"
+        app:strokeWidth="24dp"
+        app:startAngle="90"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Redraw!"
+        android:onClick="reDraw"/>
+
+</LinearLayout>

@@ -30,4 +30,11 @@
         <item name="android:typeface">sans</item>
     </style>
 
+    <style name="MyProgressBar" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:colorControlActivated">@color/pink</item>
+        <item name="android:colorControlHighlight">@android:color/darker_gray</item>
+        <item name="android:colorButtonNormal">@color/pink_light</item>
+        <item name="android:progressDrawable">@drawable/progress_bar_horizontal</item>
+        <item name="android:minWidth">200dp</item>
+    </style>
 </resources>

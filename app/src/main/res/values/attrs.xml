@@ -21,4 +21,11 @@
         <attr name="showShapeName" format="boolean"/>
     </declare-styleable>
 
+    <declare-styleable name="ArcAnimationView">
+        <attr name="backgroundColor" format="color"/>
+        <attr name="strokeWidth" format="dimension"/>
+        <attr name="fillColor" format="color"/>
+        <attr name="startAngle" format="integer"/>
+    </declare-styleable>
+
 </resources>

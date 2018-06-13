@@ -19,7 +19,7 @@ android {
     }
 }
 ext {
-    sdkVersion = '26.1.0'
+    sdkVersion = '27.1.0'
 }
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -28,6 +28,7 @@ dependencies {
     implementation "com.android.support:design:${sdkVersion}"
     implementation "com.android.support:support-v4:${sdkVersion}"
     implementation "com.android.support:gridlayout-v7:${sdkVersion}"
+    implementation "com.android.support:cardview-v7:${sdkVersion}"
 
     implementation 'com.jakewharton:butterknife:8.8.1'
 
